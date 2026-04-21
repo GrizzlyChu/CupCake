@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celestial Repacks — Contact Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@700;900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="policy.css" />
+</head>
+<body>
+  <canvas id="starCanvas"></canvas>
+  <nav id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-main">Celestial</span>
+        <span class="logo-sub">Repacks</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#tiers" class="nav-link">Tiers</a></li>
+        <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+        <li><a href="index.html#tiers" class="nav-cta">Shop Repacks</a></li>
+        <li>
+          <button class="nav-cart-btn" id="navCartBtn" aria-label="Open cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span class="nav-cart-badge" id="navCartBadge">0</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main class="policy-main">
+    <div class="policy-container">
+      <a href="index.html" class="policy-back">← Back to Home</a>
+      <p class="policy-eyebrow">Get In Touch</p>
+      <h1 class="policy-heading">Contact Us</h1>
+      <div class="policy-body">
+
+        <p class="contact-intro">Have a question about an order, a card, or just want to get in touch? Fill out the form below and we'll get back to you as soon as possible.</p>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Name</label>
+              <input type="text" id="contactName" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email</label>
+              <input type="email" id="contactEmail" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <select id="contactSubject">
+              <option value="">Select a topic</option>
+              <option value="order">Order enquiry</option>
+              <option value="shipping">Shipping question</option>
+              <option value="checklist">Checklist / card question</option>
+              <option value="refund">Refund or return</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" rows="6" placeholder="Tell us what's on your mind..." required></textarea>
+          </div>
+          <button type="submit" class="contact-submit">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Message
+          </button>
+          <p class="form-note">We typically respond within 1–2 business days.</p>
+        </form>
+
+        <script>
+          document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('.contact-submit');
+            btn.textContent = '✓ Message Sent!';
+            btn.style.opacity = '0.7';
+            btn.disabled = true;
+          });
+        </script>
+
+      </div>
+    </div>
+  </main>
+  <footer class="policy-footer">
+    <div class="policy-footer-inner">
+      <a href="index.html" class="policy-footer-logo">Celestial Repacks</a>
+      <div class="policy-footer-links">
+        <a href="shipping.html">Shipping</a>
+        <a href="refund.html">Refunds</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="tos.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h2 class="cart-drawer-title">Your Cart</h2>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-drawer-body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <div class="cart-empty-icon">🛒</div>
+        <p>Your cart is empty</p>
+        <span>Add a repack tier to get started</span>
+      </div>
+      <div class="cart-items-list" id="cartItemsList"></div>
+    </div>
+    <div class="cart-drawer-footer" id="cartFooter">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span class="cart-total-amount" id="cartTotalAmount">$0.00</span>
+      </div>
+      <p class="cart-note">Shipping calculated at checkout.</p>
+      <button class="cart-checkout-btn" id="cartCheckoutBtn">Proceed to Checkout</button>
+      <button class="cart-continue-btn" id="cartContinueBtn">Continue Shopping</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
