@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celestial — Supernova Checklist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@700;900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="tier-page.css" />
+</head>
+<body class="tier-page-body">
+
+  <canvas id="starCanvas"></canvas>
+
+  <nav id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-main">Celestial</span>
+        <span class="logo-sub">Repacks</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#tiers" class="nav-link">Tiers</a></li>
+        <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+        <li><a href="index.html#tiers" class="nav-cta">Shop Repacks</a></li>
+        <li>
+          <button class="nav-cart-btn" id="navCartBtn" aria-label="Open cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span class="nav-cart-badge" id="navCartBadge">0</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="tier-page-hero">
+    <div class="tier-hero-img-wrap">
+      <img src="supernova.jpg" alt="Supernova Repack" class="tier-hero-img" />
+      <div class="tier-hero-overlay supernova-overlay"></div>
+    </div>
+    <div class="tier-hero-content">
+      <a href="index.html#tiers" class="back-link">← All Tiers</a>
+      <h1 class="tier-hero-title supernova-glow">Supernova</h1>
+      <p class="tier-hero-sub">Blazing Gold</p>
+      <p class="tier-hero-desc">Each sealed Supernova repack contains 1 card. Browse the checklist below to see every card available in this tier.</p>
+      <div class="hero-cart-actions">
+        <button class="add-to-cart-btn supernova-cart-btn hero-cart-btn" data-id="supernova" data-name="Supernova Repack" data-price="249.00" data-img="supernova.jpg">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          Add to Cart — $249.00
+        </button>
+        <a href="index.html#tiers" class="btn-ghost">View All Tiers</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="tier-page-main">
+    <div class="tier-page-container">
+
+      <div class="tier-notice supernova-notice" data-reveal>
+        <span class="notice-icon">📋</span>
+        <div>Every card available in the Supernova tier is listed below. All packs are sealed before orders are fulfilled.</div>
+      </div>
+
+      <div class="tier-stats-bar" data-reveal>
+        <div class="stat-block">
+          <span class="stat-val supernova-text">60</span>
+          <span class="stat-label">Total Packs</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-block">
+          <span class="stat-val supernova-text">1</span>
+          <span class="stat-label">Cards Per Pack</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-block">
+          <span class="stat-val supernova-text">$249.00</span>
+          <span class="stat-label">Price Per Pack</span>
+        </div>
+      </div>
+
+      <div class="checklist-carousel" data-reveal>
+        <div class="carousel-header">
+          <h3 class="carousel-title">Supernova Checklist</h3>
+          <span class="carousel-counter"><span id="slideNum">1</span> / 2</span>
+        </div>
+
+        <div class="carousel-wrap">
+          <div class="carousel-stage">
+          <div class="carousel-slide active"><img src="supernova_review.png" alt="Checklist image 1"></div>
+          <div class="carousel-slide"><img src="supernova1.png" alt="Checklist image 2"></div>
+          </div>
+          <button class="carousel-arrow carousel-prev" onclick="changeSlide(-1)">&#8249;</button>
+          <button class="carousel-arrow carousel-next" onclick="changeSlide(1)">&#8250;</button>
+        </div>
+
+        <div class="carousel-thumbs">
+          <div class="carousel-thumb active" onclick="goToSlide(0)"><img src="supernova_review.png" alt="Thumb 1"></div>
+          <div class="carousel-thumb" onclick="goToSlide(1)"><img src="supernova1.png" alt="Thumb 2"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="tier-page-footer-strip">
+    <div class="strip-inner">
+      <a href="index.html" class="strip-logo">Celestial Repacks</a>
+      <div class="strip-links">
+        <a href="comet.html" class="strip-link">☄️ Comet</a>
+        <a href="eclipse.html" class="strip-link">🌑 Eclipse</a>
+        <a href="supernova.html" class="strip-link supernova-text">🌟 Supernova</a>
+      </div>
+      <a href="index.html#tiers" class="btn-primary">Shop All Tiers</a>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="img-lightbox" id="imgLightbox" onclick="if(event.target===this)closeLightbox()">
+    <img src="" alt="" id="lightboxImg">
+    <button class="img-lightbox-close" onclick="closeLightbox()">✕</button>
+  </div>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h2 class="cart-drawer-title">Your Cart</h2>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-drawer-body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <div class="cart-empty-icon">🛒</div>
+        <p>Your cart is empty</p>
+        <span>Add a repack tier to get started</span>
+      </div>
+      <div class="cart-items-list" id="cartItemsList"></div>
+    </div>
+    <div class="cart-drawer-footer" id="cartFooter">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span class="cart-total-amount" id="cartTotalAmount">$0.00</span>
+      </div>
+      <p class="cart-note">Shipping calculated at checkout. All packs are sealed before dispatch.</p>
+      <button class="cart-checkout-btn" id="cartCheckoutBtn">Proceed to Checkout</button>
+      <button class="cart-continue-btn" id="cartContinueBtn">Continue Shopping</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="tier-page.js"></script>
+</body>
+</html>

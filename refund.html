@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celestial Repacks — Refund Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@700;900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="policy.css" />
+</head>
+<body>
+  <canvas id="starCanvas"></canvas>
+  <nav id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-main">Celestial</span>
+        <span class="logo-sub">Repacks</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#tiers" class="nav-link">Tiers</a></li>
+        <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+        <li><a href="index.html#tiers" class="nav-cta">Shop Repacks</a></li>
+        <li>
+          <button class="nav-cart-btn" id="navCartBtn" aria-label="Open cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span class="nav-cart-badge" id="navCartBadge">0</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main class="policy-main">
+    <div class="policy-container">
+      <a href="index.html" class="policy-back">← Back to Home</a>
+      <p class="policy-eyebrow">Celestial Repacks</p>
+      <h1 class="policy-heading">Refund Policy</h1>
+      <div class="policy-body">
+
+        <h2>All Sales Are Final</h2>
+        <p>Due to the nature of trading card repacks — where the contents are sealed and disclosed in advance on each tier's checklist page — <strong>all sales are final</strong>. We do not accept returns or exchanges once an order has been placed.</p>
+
+        <h2>What You're Buying</h2>
+        <p>Every card available in each tier is listed on the checklist page before you purchase. By placing an order, you acknowledge that you have reviewed the checklist and understand what you may receive.</p>
+
+        <h2>Damaged or Incorrect Orders</h2>
+        <p>If your order arrives damaged due to shipping, or if you receive an incorrect item, please contact us within <strong>7 days</strong> of receiving your order. Include your order number and photos of the issue and we will make it right.</p>
+
+        <h2>Cancelled Orders</h2>
+        <p>Orders may be cancelled within <strong>24 hours</strong> of placement provided they have not yet been dispatched. To request a cancellation, contact us immediately via our <a href="contact.html">contact page</a>.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions about your order, please reach out via our <a href="contact.html">contact page</a>.</p>
+
+      </div>
+    </div>
+  </main>
+  <footer class="policy-footer">
+    <div class="policy-footer-inner">
+      <a href="index.html" class="policy-footer-logo">Celestial Repacks</a>
+      <div class="policy-footer-links">
+        <a href="shipping.html">Shipping</a>
+        <a href="refund.html">Refunds</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="tos.html">Terms</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h2 class="cart-drawer-title">Your Cart</h2>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-drawer-body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <div class="cart-empty-icon">🛒</div>
+        <p>Your cart is empty</p>
+        <span>Add a repack tier to get started</span>
+      </div>
+      <div class="cart-items-list" id="cartItemsList"></div>
+    </div>
+    <div class="cart-drawer-footer" id="cartFooter">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span class="cart-total-amount" id="cartTotalAmount">$0.00</span>
+      </div>
+      <p class="cart-note">Shipping calculated at checkout.</p>
+      <button class="cart-checkout-btn" id="cartCheckoutBtn">Proceed to Checkout</button>
+      <button class="cart-continue-btn" id="cartContinueBtn">Continue Shopping</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

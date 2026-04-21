@@ -1,0 +1,285 @@
+/* ════════════════════════════════════════════════════════
+   CELESTIAL REPACKS — policy.css
+   Shared styles for policy + contact pages
+   ════════════════════════════════════════════════════════ */
+
+.policy-main {
+  position: relative;
+  z-index: 1;
+  padding: 100px 32px 80px;
+  min-height: 80vh;
+}
+
+.policy-container {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.policy-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 600;
+  margin-bottom: 32px;
+  transition: color var(--transition);
+}
+.policy-back:hover { color: var(--gold-light); }
+
+.policy-eyebrow {
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.policy-heading {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Policy body prose ── */
+.policy-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.policy-body h2 {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-top: 36px;
+  margin-bottom: 12px;
+}
+.policy-body h2:first-child { margin-top: 0; }
+
+.policy-body p {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.85;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+.policy-body ul {
+  list-style: none;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.policy-body ul li {
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.7;
+  font-weight: 300;
+  padding-left: 20px;
+  position: relative;
+}
+.policy-body ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 12px;
+}
+
+.policy-body a {
+  color: var(--gold-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition);
+}
+.policy-body a:hover { color: var(--gold-bright); }
+
+.policy-body strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.policy-updated {
+  font-size: 12px !important;
+  color: var(--text-dim) !important;
+  font-style: italic;
+  margin-top: 32px !important;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Contact form ── */
+.contact-intro {
+  font-size: 15px !important;
+  color: var(--text-mid) !important;
+  margin-bottom: 36px !important;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 600;
+  font-family: var(--font-body);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 13px 16px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-dim);
+}
+
+.form-group select {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23c8a84b' d='M6 9L1.5 4.5h9z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.form-group select option {
+  background: #07101f;
+  color: var(--text);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--gold-border);
+  box-shadow: 0 0 0 3px rgba(200,168,75,0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.6;
+}
+
+.contact-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  color: var(--bg);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: opacity var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 20px rgba(200,168,75,0.3);
+  align-self: flex-start;
+}
+.contact-submit:hover { opacity: 0.88; transform: translateY(-1px); box-shadow: 0 6px 28px rgba(200,168,75,0.4); }
+
+.form-note {
+  font-size: 12px !important;
+  color: var(--text-dim) !important;
+  font-style: italic;
+  margin-top: -8px !important;
+  margin-bottom: 0 !important;
+}
+
+/* ── Footer ── */
+.policy-footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--border);
+  background: rgba(2,5,9,0.95);
+  padding: 22px 32px;
+}
+.policy-footer-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.policy-footer-logo {
+  font-family: var(--font-deco);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.policy-footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.policy-footer-links a {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 600;
+  transition: color var(--transition);
+}
+.policy-footer-links a:hover { color: var(--gold-light); }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .policy-main { padding: 90px 20px 60px; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-submit { width: 100%; }
+  .policy-footer-inner { flex-direction: column; align-items: flex-start; }
+}

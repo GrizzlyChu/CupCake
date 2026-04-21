@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celestial Repacks — Premium Sealed Card Repacks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@700;900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="starCanvas"></canvas>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-main">Celestial</span>
+        <span class="logo-sub">Repacks</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#tiers" class="nav-link">Tiers</a></li>
+        <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#tiers" class="nav-cta">Shop Repacks</a></li>
+        <li>
+          <button class="nav-cart-btn" id="navCartBtn" aria-label="Open cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span class="nav-cart-badge" id="navCartBadge">0</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow" data-reveal>
+        <span class="eyebrow-line"></span>
+        Premium · Sealed · Hand-Picked
+        <span class="eyebrow-line"></span>
+      </div>
+      <h1 class="hero-title" data-reveal>
+        <span class="title-line">The Universe</span>
+        <span class="title-line title-gold">Is Waiting</span>
+      </h1>
+      <p class="hero-desc" data-reveal>
+        Three tiers. Three fates. Every sealed Celestial Repack holds something extraordinary — from the entry-level Comet to the crown pull of the Supernova. Your cosmos, your card.
+      </p>
+      <div class="hero-actions" data-reveal>
+        <a href="#tiers" class="btn-primary">Shop Repacks</a>
+      </div>
+      <div class="hero-tier-badges" data-reveal>
+        <div class="tier-badge comet-badge">
+          <span class="badge-icon">☄️</span>
+          <span>Comet</span>
+        </div>
+        <div class="tier-divider">·</div>
+        <div class="tier-badge eclipse-badge">
+          <span class="badge-icon">🌑</span>
+          <span>Eclipse</span>
+        </div>
+        <div class="tier-divider">·</div>
+        <div class="tier-badge supernova-badge">
+          <span class="badge-icon">🌟</span>
+          <span>Supernova</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- TIERS -->
+  <section id="tiers">
+    <div class="section-container">
+      <div class="section-header" data-reveal>
+        <p class="section-eyebrow">Three Packs · One Universe</p>
+        <h2 class="section-title">Choose Your Tier</h2>
+        <p class="section-desc">Each Celestial Repack is sealed and ready to ship. You'll get 1 card per pack — every card is listed on the checklist page before you buy.</p>
+      </div>
+
+      <div class="tiers-grid">
+
+        <!-- COMET -->
+        <div class="tier-card comet" data-reveal data-delay="0">
+          <div class="tier-card-bg"></div>
+          <div class="tier-card-glow"></div>
+          <div class="tier-card-inner">
+            <div class="tier-number">01</div>
+            <div class="tier-img-wrap">
+              <img src="comet.jpg" alt="Comet Repack" class="tier-img" />
+              <div class="tier-img-overlay"></div>
+            </div>
+            <div class="tier-info">
+              <h3 class="tier-name">Comet</h3>
+              <p class="tier-tagline">Icy White · Silver</p>
+            </div>
+            <ul class="tier-contents">
+              <li><span class="content-dot"></span>You'll get a card</li>
+              <li><span class="content-dot"></span>Hand-picked for quality</li>
+              <li><span class="content-dot"></span>Every card listed before you buy</li>
+            </ul>
+            <div class="tier-pricing">
+              <div class="tier-price-block">
+                <span class="tier-price-label">Price per pack</span>
+                <span class="tier-price comet-text">$29.00</span>
+              </div>
+            </div>
+            <div class="tier-actions">
+              <button class="add-to-cart-btn comet-cart-btn" data-id="comet" data-name="Comet Repack" data-price="29.00" data-img="comet.jpg">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                Add to Cart
+              </button>
+              <a href="comet.html" class="tier-btn-ghost comet-ghost">View Checklist</a>
+            </div>
+          </div>
+          <div class="corner c-tl"></div><div class="corner c-tr"></div>
+          <div class="corner c-bl"></div><div class="corner c-br"></div>
+        </div>
+
+        <!-- ECLIPSE -->
+        <div class="tier-card eclipse featured" data-reveal data-delay="150">
+          <div class="tier-card-bg"></div>
+          <div class="tier-card-glow"></div>
+          <div class="featured-tag">Most Popular</div>
+          <div class="tier-card-inner">
+            <div class="tier-number">02</div>
+            <div class="tier-img-wrap">
+              <img src="eclipse.jpg" alt="Eclipse Repack" class="tier-img" />
+              <div class="tier-img-overlay"></div>
+            </div>
+            <div class="tier-info">
+              <h3 class="tier-name">Eclipse</h3>
+              <p class="tier-tagline">Hot Crimson</p>
+            </div>
+            <ul class="tier-contents">
+              <li><span class="content-dot"></span>You'll get a card</li>
+              <li><span class="content-dot"></span>Hand-picked for quality</li>
+              <li><span class="content-dot"></span>Every card listed before you buy</li>
+            </ul>
+            <div class="tier-pricing">
+              <div class="tier-price-block">
+                <span class="tier-price-label">Price per pack</span>
+                <span class="tier-price eclipse-text">$79.00</span>
+              </div>
+            </div>
+            <div class="tier-actions">
+              <button class="add-to-cart-btn eclipse-cart-btn" data-id="eclipse" data-name="Eclipse Repack" data-price="79.00" data-img="eclipse.jpg">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                Add to Cart
+              </button>
+              <a href="eclipse.html" class="tier-btn-ghost eclipse-ghost">View Checklist</a>
+            </div>
+          </div>
+          <div class="corner c-tl"></div><div class="corner c-tr"></div>
+          <div class="corner c-bl"></div><div class="corner c-br"></div>
+        </div>
+
+        <!-- SUPERNOVA -->
+        <div class="tier-card supernova" data-reveal data-delay="300">
+          <div class="tier-card-bg"></div>
+          <div class="tier-card-glow"></div>
+          <div class="tier-card-inner">
+            <div class="tier-number">03</div>
+            <div class="tier-img-wrap">
+              <img src="supernova.jpg" alt="Supernova Repack" class="tier-img" />
+              <div class="tier-img-overlay"></div>
+            </div>
+            <div class="tier-info">
+              <h3 class="tier-name">Supernova</h3>
+              <p class="tier-tagline">Blazing Gold · The Crown Pull</p>
+            </div>
+            <ul class="tier-contents">
+              <li><span class="content-dot"></span>You'll get a card</li>
+              <li><span class="content-dot"></span>Hand-picked for quality</li>
+              <li><span class="content-dot"></span>Every card listed before you buy</li>
+            </ul>
+            <div class="tier-pricing">
+              <div class="tier-price-block">
+                <span class="tier-price-label">Price per pack</span>
+                <span class="tier-price supernova-text">$249.00</span>
+              </div>
+            </div>
+            <div class="tier-actions">
+              <button class="add-to-cart-btn supernova-cart-btn" data-id="supernova" data-name="Supernova Repack" data-price="249.00" data-img="supernova.jpg">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                Add to Cart
+              </button>
+              <a href="supernova.html" class="tier-btn-ghost supernova-ghost">View Checklist</a>
+            </div>
+          </div>
+          <div class="corner c-tl"></div><div class="corner c-tr"></div>
+          <div class="corner c-bl"></div><div class="corner c-br"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works">
+    <div class="section-container">
+      <div class="section-header" data-reveal>
+        <p class="section-eyebrow">Simple · Straightforward · Reliable</p>
+        <h2 class="section-title">How It Works</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step" data-reveal data-delay="0">
+          <div class="step-number">01</div>
+          <div class="step-icon">🎯</div>
+          <h3 class="step-title">Pick Your Tier</h3>
+          <p class="step-desc">Choose Comet, Eclipse, or Supernova. The price point reflects the tier — every card is different and listed on the checklist before you buy.</p>
+        </div>
+        <div class="step-arrow" data-reveal>→</div>
+        <div class="step" data-reveal data-delay="100">
+          <div class="step-number">02</div>
+          <div class="step-icon">📦</div>
+          <h3 class="step-title">We Seal It</h3>
+          <p class="step-desc">Cards are hand-picked and heat-sealed into custom foil packs. Once sealed, nothing changes — every card is listed before you buy.</p>
+        </div>
+        <div class="step-arrow" data-reveal>→</div>
+        <div class="step" data-reveal data-delay="200">
+          <div class="step-number">03</div>
+          <div class="step-icon">🛒</div>
+          <h3 class="step-title">Order Online</h3>
+          <p class="step-desc">Browse the checklist for each tier, pick your pack, and add it to your cart. Every card is listed before you buy — no surprises.</p>
+        </div>
+        <div class="step-arrow" data-reveal>→</div>
+        <div class="step" data-reveal data-delay="300">
+          <div class="step-number">04</div>
+          <div class="step-icon">🚀</div>
+          <h3 class="step-title">Cards Shipped</h3>
+          <p class="step-desc">Every card ships securely packaged in a rigid mailer. We take packaging seriously — your card arrives safe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-container">
+      <div class="section-header" data-reveal>
+        <p class="section-eyebrow">Got Questions?</p>
+        <h2 class="section-title">FAQ</h2>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item" data-reveal>
+          <button class="faq-question">
+            <span>What is a Celestial Repack?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>A Celestial Repack is a sealed foil pack containing a trading card. We hand-pick every card, seal it inside branded foil packaging, and sell them as repacks. Three tiers — Comet, Eclipse, and Supernova — each with different cards at different price points.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-reveal>
+          <button class="faq-question">
+            <span>Is this Whatnot compliant?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. All packs are heat-sealed before any orders are fulfilled. Each tier's checklist page lists every card available so buyers know exactly what they could receive before purchasing.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-reveal>
+          <button class="faq-question">
+            <span>Are the contents guaranteed?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Every card available in each tier is listed on the checklist page. What you see on the checklist is what's in the packs — nothing more, nothing less.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-reveal>
+          <button class="faq-question">
+            <span>How do I get a Supernova pack?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Browse the checklist, pick the tier you want, and add it to your cart. Stock is limited — once a pack is gone, it's gone.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-reveal>
+          <button class="faq-question">
+            <span>What sports and products are included?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We pull from NBA, NFL, MLB, and Soccer products across Panini, Topps, Upper Deck, and other major manufacturers. The specific products change with each release — check the checklist pages for the full breakdown.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" data-reveal>
+          <button class="faq-question">
+            <span>How are cards shipped?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Every card ships securely packaged in a rigid mailer. We take packaging seriously — your card arrives safe.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section id="cta-banner">
+    <div class="cta-inner" data-reveal>
+      <div class="cta-glow"></div>
+      <p class="cta-eyebrow">Limited Stock · Order Now</p>
+      <h2 class="cta-title">Find Your<br/><span class="cta-gold">Perfect Repack</span></h2>
+      <p class="cta-desc">Browse the checklist, pick your tier, and secure your pack before they're gone.</p>
+      <a href="#tiers" class="btn-primary btn-large">Shop Repacks ↗</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Celestial</div>
+          <p class="footer-tagline">Premium sealed card repacks. Three tiers. Every card listed before you buy.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-nav-group">
+          <h4>Explore</h4>
+          <a href="#tiers">Tiers</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>Policies</h4>
+          <a href="shipping.html">Shipping Policy</a>
+          <a href="refund.html">Refund Policy</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="tos.html">Terms of Service</a>
+        </div>
+        <div class="footer-nav-group">
+          <h4>Shop</h4>
+          <a href="comet.html">☄️ Comet — $29</a>
+          <a href="eclipse.html">🌑 Eclipse — $79</a>
+          <a href="supernova.html">🌟 Supernova — $249</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Celestial Repacks. All rights reserved.</p>
+        <p class="footer-compliance">All repacks are sealed product · Every card listed · Contents updated regularly</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h2 class="cart-drawer-title">Your Cart</h2>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-drawer-body" id="cartBody">
+      <div class="cart-empty" id="cartEmpty">
+        <div class="cart-empty-icon">🛒</div>
+        <p>Your cart is empty</p>
+        <span>Add a repack tier to get started</span>
+      </div>
+      <div class="cart-items-list" id="cartItemsList"></div>
+    </div>
+    <div class="cart-drawer-footer" id="cartFooter">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span class="cart-total-amount" id="cartTotalAmount">$0.00</span>
+      </div>
+      <p class="cart-note">Shipping calculated at checkout. All packs are sealed before dispatch.</p>
+      <button class="cart-checkout-btn" id="cartCheckoutBtn">Proceed to Checkout</button>
+      <button class="cart-continue-btn" id="cartContinueBtn">Continue Shopping</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
