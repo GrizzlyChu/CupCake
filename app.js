@@ -255,6 +255,7 @@ const Cart = (function() {
       `).join('');
     }
     if (totalEl) totalEl.textContent = `$${total().toFixed(2)}`;
+    updateCheckoutState();
   }
 
   let toastTimer;
@@ -282,10 +283,26 @@ const Cart = (function() {
     document.getElementById('cartCloseBtn')?.addEventListener('click', closeDrawer);
     document.getElementById('cartOverlay')?.addEventListener('click', closeDrawer);
     document.getElementById('cartContinueBtn')?.addEventListener('click', closeDrawer);
-    document.getElementById('cartCheckoutBtn')?.addEventListener('click', () => {
+    const checkoutBtn = document.getElementById('cartCheckoutBtn');
+    function updateCheckoutState() {
+      if (!checkoutBtn) return;
+      if (items.length === 0) {
+        checkoutBtn.disabled = true;
+        checkoutBtn.style.opacity = '0.4';
+        checkoutBtn.style.cursor = 'not-allowed';
+        checkoutBtn.title = 'Your cart is empty';
+      } else {
+        checkoutBtn.disabled = false;
+        checkoutBtn.style.opacity = '1';
+        checkoutBtn.style.cursor = 'pointer';
+        checkoutBtn.title = '';
+      }
+    }
+    checkoutBtn?.addEventListener('click', () => {
       if (items.length === 0) return;
       showToast('Redirecting to checkout…');
     });
+    updateCheckoutState();
 
     document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
       btn.addEventListener('click', () => {

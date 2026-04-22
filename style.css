@@ -1649,3 +1649,49 @@ footer {
 
 /* ── Selection ── */
 ::selection { background: rgba(200,168,75,0.25); color: var(--text); }
+
+/* ── Sold Out button ── */
+.sold-out-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 13px 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.04);
+  color: var(--text-dim);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ── Sold Out Buttons ── */
+.sold-out-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: not-allowed;
+  background: rgba(255,255,255,0.04);
+  color: var(--text-dim);
+  opacity: 0.55;
+  /* match exact sizing of btn-ghost */
+  width: auto;
+}
+/* On tier cards (homepage) — full width to match the ghost button below it */
+.tier-actions .sold-out-btn {
+  width: 100%;
+  border-radius: var(--radius-sm);
+}

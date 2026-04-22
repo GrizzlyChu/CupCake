@@ -28,6 +28,7 @@
         <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
         <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
         <li><a href="index.html#tiers" class="nav-cta">Shop Repacks</a></li>
+
         <li>
           <button class="nav-cart-btn" id="navCartBtn" aria-label="Open cart">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
@@ -50,10 +51,7 @@
       <p class="tier-hero-sub">Hot Crimson</p>
       <p class="tier-hero-desc">Each sealed Eclipse repack contains 1 card. Browse the checklist below to see every card available in this tier.</p>
       <div class="hero-cart-actions">
-        <button class="add-to-cart-btn eclipse-cart-btn hero-cart-btn" data-id="eclipse" data-name="Eclipse Repack" data-price="79.00" data-img="eclipse.jpg">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-          Add to Cart — $79.00
-        </button>
+        <button class="sold-out-btn" disabled>Sold Out</button>
         <a href="index.html#tiers" class="btn-ghost">View All Tiers</a>
       </div>
     </div>
@@ -92,17 +90,17 @@
         </div>
         <div class="carousel-wrap">
           <div class="carousel-stage">
-          <div class="carousel-slide active"><img src="eclipse_review.png" alt="Checklist image 1"></div>
-          <div class="carousel-slide"><img src="eclipse1.png" alt="Checklist image 2"></div>
-          <div class="carousel-slide"><img src="eclipse2.png" alt="Checklist image 3"></div>
+          <div class="carousel-slide active"><img src="eclipse_review.png" alt="Featured cards preview"></div>
+          <div class="carousel-slide"><img src="eclipse1.png" alt="Checklist image 1"></div>
+          <div class="carousel-slide"><img src="eclipse2.png" alt="Checklist image 2"></div>
           </div>
           <button class="carousel-arrow carousel-prev" onclick="changeSlide(-1)">&#8249;</button>
           <button class="carousel-arrow carousel-next" onclick="changeSlide(1)">&#8250;</button>
         </div>
         <div class="carousel-thumbs">
-          <div class="carousel-thumb active" onclick="goToSlide(0)"><img src="eclipse_review.png" alt="Thumb 1"></div>
-          <div class="carousel-thumb" onclick="goToSlide(1)"><img src="eclipse1.png" alt="Thumb 2"></div>
-          <div class="carousel-thumb" onclick="goToSlide(2)"><img src="eclipse2.png" alt="Thumb 3"></div>
+          <div class="carousel-thumb active" onclick="goToSlide(0)"><img src="eclipse_review.png" alt="Featured preview"></div>
+          <div class="carousel-thumb" onclick="goToSlide(1)"><img src="eclipse1.png" alt="Thumb 1"></div>
+          <div class="carousel-thumb" onclick="goToSlide(2)"><img src="eclipse2.png" alt="Thumb 2"></div>
         </div>
       </div>
 
@@ -125,7 +123,9 @@
   <div class="img-lightbox" id="imgLightbox" onclick="if(event.target===this)closeLightbox()">
     <img src="" alt="" id="lightboxImg">
     <button class="img-lightbox-close" onclick="closeLightbox()">✕</button>
-  </div>
+  </div><script src="app.js"></script>
+  <script src="tier-page.js"></script>
+
 
   <!-- CART DRAWER -->
   <div class="cart-overlay" id="cartOverlay"></div>
@@ -155,7 +155,5 @@
     </div>
   </div>
 
-  <script src="app.js"></script>
-  <script src="tier-page.js"></script>
 </body>
 </html>
