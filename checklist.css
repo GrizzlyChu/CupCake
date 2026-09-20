@@ -1,0 +1,94 @@
+/* ════════════════════════════════════════════════════════
+   CELESTIAL REPACKS — checklist.css
+   Embedded HTML checklist tables for series pages
+   ════════════════════════════════════════════════════════ */
+
+.cl-tier-block {
+  margin-bottom: 32px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.comet-block     { border-color: var(--comet-border); }
+.eclipse-block   { border-color: var(--eclipse-border); }
+.supernova-block { border-color: var(--nova-border); }
+
+.cl-tier-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid var(--border);
+}
+.cl-tier-emoji { font-size: 22px; }
+.cl-tier-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  flex: 1;
+}
+.cl-tier-count {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.cl-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-border) transparent;
+}
+.cl-table-wrap::-webkit-scrollbar { height: 4px; }
+.cl-table-wrap::-webkit-scrollbar-thumb { background: var(--gold-border); border-radius: 2px; }
+
+.cl-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  min-width: 700px;
+}
+.cl-table thead tr {
+  background: rgba(255,255,255,0.04);
+  border-bottom: 1px solid var(--border);
+}
+.cl-table th {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.cl-table tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: background var(--transition);
+}
+.cl-table tbody tr:hover { background: rgba(255,255,255,0.03); }
+.cl-table tbody tr:last-child { border-bottom: none; }
+.cl-table td {
+  padding: 9px 14px;
+  color: var(--text-mid);
+  line-height: 1.4;
+  vertical-align: middle;
+}
+
+.cl-num    { color: var(--text-dim); font-size: 11px; width: 40px; text-align: center; }
+.cl-player { color: var(--text); font-weight: 600; white-space: nowrap; }
+.cl-mfr    { white-space: nowrap; color: var(--text-dim); }
+.cl-series { white-space: nowrap; }
+.cl-type   { font-size: 11px; }
+.cl-cond   { font-size: 11px; color: var(--text-dim); white-space: nowrap; }
+.cl-team   { font-size: 11px; white-space: nowrap; }
+
+@media (max-width: 600px) {
+  .cl-tier-header { flex-wrap: wrap; gap: 8px; padding: 14px 16px; }
+  .cl-table th, .cl-table td { padding: 8px 10px; }
+}
